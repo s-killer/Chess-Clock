@@ -32,12 +32,13 @@ public abstract class MainActivity extends AppCompatActivity {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (isChecked) {
                 if (buttonView == playerOneClock) {
-                    playerTwoClock.setChecked(false);
+                    playerTwoClock.setChecked(true);
+                    playerOneClock.setChecked(false);
 
                 }
                 if (buttonView == playerTwoClock) {
-                    playerOneClock.setChecked(false);
-
+                    playerTwoClock.setChecked(false);
+                    playerOneClock.setChecked(true);
                 }
 
             }
