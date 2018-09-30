@@ -1,106 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+
+    <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="252dp">
+
 
         <FrameLayout
 
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_margin="16dp"
-            android:layout_weight="2"
-            tools:padding="6dp">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp">
 
             <ToggleButton
-                android:id="@+id/playerOneButton"
+                android:id="@+id/playerTwoButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="190dp"
                 android:background="@drawable/my_button_bg"
                 android:rotationX="180"
-
-                android:text="Button"
+                android:text="@string/button"
                 android:textColor="@android:color/black"
-                android:textOff="00:00"
-                android:textSize="24sp"
-                android:visibility="visible"
-                tools:text="00:00" />
+                android:textOff="@string/_00_10"
+                android:textSize="56sp" />
         </FrameLayout>
 
         <LinearLayout
             android:id="@+id/menu_container"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="4dp">
 
             <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp">
 
 
                 <ToggleButton
-                    android:id="@+id/resume_pause_toggle"
+                    android:id="@+id/Resume_Pause_Button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/check"
-                    android:textOff=" "
-                    android:textOn=" " />
+                    android:textOn=" "
+                    android:textOff=" "/>
             </FrameLayout>
 
             <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#424242"
+                android:drawableLeft="@drawable/restart3"
+                android:drawableStart="@drawable/restart3"
+                android:gravity="center" />
+
+        </FrameLayout>
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/reset"
+                    android:id="@+id/Settings_Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="#424242"
-                    android:drawableLeft="@drawable/restart3"
-                    />
+                    android:drawableLeft="@drawable/settings_filled_64"
+                    android:drawableStart="@drawable/settings_filled_64"
+                    android:gravity="center" />
 
             </FrameLayout>
         </LinearLayout>
 
+
         <FrameLayout
 
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"
-            tools:padding="6dp">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp">
 
             <ToggleButton
-                android:id="@+id/playerTwoButton"
+                android:id="@+id/playerOneButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="190dp"
                 android:background="@drawable/my_button_bg"
-                android:text="Button"
+                android:text="@string/button"
                 android:textColor="@android:color/black"
-                android:textOff="00:00"
-                android:textSize="24sp"
-                tools:text="00:00" />
+                android:textOff="@string/_00_00_"
+                android:textSize="56sp" />
+
         </FrameLayout>
-    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>
